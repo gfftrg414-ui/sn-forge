@@ -52,10 +52,16 @@ if (product) {
     document.getElementById("productName").textContent = product.name;
     document.getElementById("productPrice").textContent = product.price;
     document.getElementById("productDescription").textContent = product.description;
+
+    document.getElementById("checkoutLink").href =
+        "checkout.html?id=" + productId;
+
 } else {
     document.getElementById("productName").textContent = "سایت موردنظر پیدا نشد";
+
     document.getElementById("productDescription").textContent =
         "لطفاً از صفحه اصلی یکی از سایت‌ها را انتخاب کنید.";
+
     document.getElementById("productImage").style.display = "none";
     document.getElementById("productPrice").style.display = "none";
 }
